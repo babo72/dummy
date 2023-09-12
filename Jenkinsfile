@@ -1,16 +1,14 @@
 pipeline {
-    agent {
-        docker { image 'node:18.17.1-alpine3.18' }
-    }
+    agent any
     stages {
         stage('Prepare') {
             steps {
-                sh 'echo "Preparing..."'
+                sh 'echo "[Stage] Preparing..."'
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "Test..."'
+                sh 'echo "[Stage] Test..."'
             }
         }
     }
